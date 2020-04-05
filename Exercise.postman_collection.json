@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Exercise",
+		"_postman_id": "aafce03b-3733-e9a0-e9a7-4485667c5814",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get person",
+			"request": {
+				"url": "http://localhost:8081/persons",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create  person",
+			"request": {
+				"url": "http://localhost:8081/persons",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"firstName\": \"test5\", \"lastName\": \"user\", \"email\": \"test@test.com\" }"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get person by first name",
+			"request": {
+				"url": "http://localhost:8081/persons/getPersonByFirstName/test5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete person",
+			"request": {
+				"url": "http://localhost:8081/persons/test5",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update person",
+			"request": {
+				"url": "http://localhost:8081/persons/test2",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"firstName\": \"test2\", \"lastName\": \"user2\", \"email\": \"abe@test.com\" }"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
